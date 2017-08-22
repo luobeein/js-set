@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习一</title>
+	<style type="text/css">
+		body,input{
+			margin: 0;
+			padding: 0;
+			font: 20px "microsoft yahei",sans-serif;
+		}
+		input{
+			background: none;
+			border: none;
+			outline: none;
+		}
+		#set{
+			margin: 10px;
+		}
+		#set input{
+			width: 100px;
+			background-color: #ff0;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			border: 10px solid #000;
+		}
+		#select{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			background-color: #eee;
+			width: 400px;
+			height: 300px;
+			margin-left: -200px;
+			margin-top: -150px;
+			font: 12px Arial,sans-serif;
+			display: none;
+		}
+		.select-box{
+			width: 360px;
+			height: 260px;
+			margin: 20px;
+			background-color: #fff;
+		}
+		.select-box input{
+			width: 50px;
+			height: 30px;
+			background-color: #0ff;
+			cursor: pointer;
+		}
+		.bg,.wid,.hei{
+			height: 50px;
+			margin: 25px;
+		}
+		.ok{
+			height: 50px;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function () {
+			var oBtn=document.getElementById('set-btn');
+			var oDiv=document.getElementById('box');
+			var oSel=document.getElementById('select');
+
+			var oBgBtn1=document.getElementById('bg-btn1');
+			var oBgBtn2=document.getElementById('bg-btn2');
+			var oBgBtn3=document.getElementById('bg-btn3');
+
+			var oWidBtn1=document.getElementById('wid-btn1');
+			var oWidBtn2=document.getElementById('wid-btn2');
+			var oWidBtn3=document.getElementById('wid-btn3');
+
+			var oHeiBtn1=document.getElementById('hei-btn1');
+			var oHeiBtn2=document.getElementById('hei-btn2');
+			var oHeiBtn3=document.getElementById('hei-btn3');
+
+			var oOkBtn1=document.getElementById('ok-btn1');
+			var oOkBtn2=document.getElementById('ok-btn2');
+
+			oBtn.onclick=function(){
+				oSel.style.display='block';
+			}
+			oBgBtn1.onclick=function(){
+				oDiv.style.background='#f00';
+			}
+			oBgBtn2.onclick=function(){
+				oDiv.style.background='#ff0';
+			}
+			oBgBtn3.onclick=function(){
+				oDiv.style.background='#00f';
+			}
+
+			oWidBtn1.onclick=function(){
+				oDiv.style.width='200px';
+			}
+			oWidBtn2.onclick=function(){
+				oDiv.style.width='300px';
+			}
+			oWidBtn3.onclick=function(){
+				oDiv.style.width='400px';
+			}
+
+			oHeiBtn1.onclick=function(){
+				oDiv.style.height='200px';
+			}
+			oHeiBtn2.onclick=function(){
+				oDiv.style.height='300px';
+			}
+			oHeiBtn3.onclick=function(){
+				oDiv.style.height='400px';
+			}
+
+			oOkBtn1.onclick=function(){
+				oDiv.style.background='none';
+				oDiv.style.width='100px';
+				oDiv.style.height='100px';
+			}
+			oOkBtn2.onclick=function(){
+				oSel.style.display='none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="set">
+		<strong>请为下面的DIV设置样式:</strong>
+		<input id="set-btn" type="button" value="点击设置">
+	</div>
+	
+	<div id="box"></div>
+	<div id="select">
+		<div class="select-box">
+			<div class="bg">
+				请选择背景：
+				<input id="bg-btn1" type="button" value="红">
+				<input id="bg-btn2" type="button" value="黄">
+				<input id="bg-btn3" type="button" value="蓝">
+			</div>
+			<div class="wid">
+				请选择宽度（px）：
+				<input id="wid-btn1" type="button" value="200">
+				<input id="wid-btn2" type="button" value="300">
+				<input id="wid-btn3" type="button" value="400">
+			</div>
+			<div class="hei">
+				请选择高度（px）：
+				<input id="hei-btn1" type="button" value="200">
+				<input id="hei-btn2" type="button" value="300">
+				<input id="hei-btn3" type="button" value="400">
+			</div>
+			<div class="ok">
+				<input id="ok-btn1" type="button" value="恢复">
+				<input id="ok-btn2" type="button" value="确定">
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
